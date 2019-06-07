@@ -1,0 +1,20 @@
+//
+// Base styles
+//
+.card {
+  box-shadow: 0;
+  transition: $transition-base;
+  &:hover { box-shadow: $box-shadow-sm; }
+}
+.card-subtitle { margin-top: 0; }
+
+
+//
+// Optional textual caps
+//
+.card-footer { border-top: none; }
+
+// Card image
+.card-img-overlay { @include gradient-y(transparentize($black, 1), transparentize($black, .5)); }
+
+.card-img { @include border-radius(0); }

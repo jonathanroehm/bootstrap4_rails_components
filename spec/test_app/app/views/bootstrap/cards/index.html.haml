@@ -1,0 +1,25 @@
+%h1 Cards
+
+= ui.bootstrap :card, heading: 'Card heading', title: 'Card title', subtitle: 'Card subtitle', body: 'Card body', class: 'my-4'
+= ui.bootstrap :card, heading: 'Card heading', class: 'my-4' do
+  %p.card-text Card body from a block
+= ui.bootstrap :card do
+  Default, no frills card
+
+%hr
+
+%h2 Themes
+
+%h3 Solid Card Themes
+
+- themes = [:primary, :secondary, :success, :danger, :warning, :info, :light, :dark]
+- themes.each do |theme|
+  = ui.bootstrap :card, heading: 'Card Headline', title: 'Card title', subtitle: 'Card Subtitle', theme: theme, footer: 'Card Footer', class: 'my-4' do
+    %p.card-text Card with #{theme} theme
+%hr
+
+%h3 Outlined Card Themes
+
+- themes.each do |theme|
+  = ui.bootstrap :card, outlined: true, heading: 'Card Headline', title: 'Card title', subtitle: 'Card Subtitle', theme: theme, class: 'my-4', footer: 'Card Footer' do
+    %p.card-text Card with #{theme} theme

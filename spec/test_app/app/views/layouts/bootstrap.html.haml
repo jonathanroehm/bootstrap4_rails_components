@@ -1,0 +1,17 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    = render partial: 'bootstrap4_rails/app_icons/icons'
+    %title Bootstrap TestApp Side
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag    'bootstrap4_rails/bootstrap/application', media: 'all'
+    = javascript_include_tag 'application'
+
+  %body{ class: body_css_classes }
+    = render 'layouts/nav', component_suite: 'Bootstrap UI'
+    .container.mb-5
+      .row
+        .col
+          = yield
