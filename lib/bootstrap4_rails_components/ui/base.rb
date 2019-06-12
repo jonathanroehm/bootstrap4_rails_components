@@ -12,17 +12,24 @@ module Bootstrap4RailsComponents
       end
 
       def bootstrap(component_name = nil, *traits, **options, &block)
+        return unless render_component?(options)
         Bootstrap4RailsComponents::UI::Bootstrap.new(view_context, component_name, *traits, **options, &block).render_component
-      end
-
-      def nfg(component_name = nil, *traits, **options, &block)
-        return unless render_nfg_component?(options)
-        Bootstrap4RailsComponents::UI::NetworkForGood.new(view_context, component_name, *traits, **options, &block).render_component
       end
 
       private
 
-      def render_nfg_component?(options)
+      # Opens up the component :options -
+      # :render_if
+      # :render_unless
+      #
+      # Pass in `render_if: your_condition?` or `render_unless: your_unless_condition?`
+      # to the component to embed the `if/unless` condition right into the component
+      # and not on yet another line of HTML.
+      #
+      # Example usage:
+      # ui.bootstrap(:button, :submit, body: 'Delete', render_if: user.admin?)
+      # ui.bootstrap(:button, :submit, body: 'Save', render_unless: user.admin?)
+      def render_component?(options)
         return true unless options.key?(:render_if) || options.key?(:render_unless)
         if options.key?(:render_if)
           options[:render_if]

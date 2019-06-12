@@ -1,36 +1,36 @@
 %h1 Cards
 
-= ui.nfg :card, heading: 'stuff', title: 'title!', describe: 'donor-scroll' do
+= ui.bootstrap :card, heading: 'stuff', title: 'title!', describe: 'donor-scroll' do
   Howdy
 
-= ui.nfg :card, heading: 'Card heading', subtitle: 'Card subtitle', body: 'Card body', class: 'my-4'
+= ui.bootstrap :card, heading: 'Card heading', subtitle: 'Card subtitle', body: 'Card body', class: 'my-4'
 
-= ui.nfg :card, heading: 'Card heading', class: 'my-4' do
+= ui.bootstrap :card, heading: 'Card heading', class: 'my-4' do
   %p.card-text Card body from a block
 
-= ui.nfg :card, class: 'my-4' do
+= ui.bootstrap :card, class: 'my-4' do
   Default, no frills card
 
-= ui.nfg :card, render_in_body: false, class: 'my-4' do
-  = ui.nfg :card_image_overlay, image: 'https://via.placeholder.com/600x400', title: 'Card Image Overlay Title' do
+= ui.bootstrap :card, render_in_body: false, class: 'my-4' do
+  = ui.bootstrap :card_image_overlay, image: 'https://via.placeholder.com/600x400', title: 'Card Image Overlay Title' do
     %p.card-text Some additional information
-  = ui.nfg :card_body do
+  = ui.bootstrap :card_body do
     %p.card-text Some body content
 
 
-= ui.nfg :card, render_in_body: false, class: 'my-4' do
-  = ui.nfg :card_image, image: 'https://via.placeholder.com/600x400', title: 'Card Image Overlay Title'
-  = ui.nfg :card_body do
+= ui.bootstrap :card, render_in_body: false, class: 'my-4' do
+  = ui.bootstrap :card_image, image: 'https://via.placeholder.com/600x400', title: 'Card Image Overlay Title'
+  = ui.bootstrap :card_body do
     %p.card-text card image version without overlay
 
 %hr
 
 %h2 Card with render in body false
-= ui.nfg :card, title: 'Tile without body', render_in_body: false do
-  = ui.nfg :card_body, body: 'Manual card body'
-  = ui.nfg :card_body do
+= ui.bootstrap :card, title: 'Tile without body', render_in_body: false do
+  = ui.bootstrap :card_body, body: 'Manual card body'
+  = ui.bootstrap :card_body do
     %p Some content for the second card body
-  = ui.nfg :card_footer, body: 'the card footer'
+  = ui.bootstrap :card_footer, body: 'the card footer'
 
 %hr
 
@@ -38,39 +38,39 @@
 
 %h3 Solid Card Themes
 
-= ui.nfg :card, :primary, heading: 'Card Headline', subtitle: 'Card Subtitle', class: 'my-4', footer: 'Card Footer' do
+= ui.bootstrap :card, :primary, heading: 'Card Headline', subtitle: 'Card Subtitle', class: 'my-4', footer: 'Card Footer' do
   %p.card-text Card with primary theme
 
-= ui.nfg :card, :secondary, heading: 'Card Headline', subtitle: 'Card Subtitle', class: 'my-4', body: 'Card with secondary theme'
+= ui.bootstrap :card, :secondary, heading: 'Card Headline', subtitle: 'Card Subtitle', class: 'my-4', body: 'Card with secondary theme'
 
-= ui.nfg :card, :success, heading: 'Card Headline', subtitle: 'Card Subtitle', class: 'my-4', body: 'Card with success theme'
+= ui.bootstrap :card, :success, heading: 'Card Headline', subtitle: 'Card Subtitle', class: 'my-4', body: 'Card with success theme'
 
-= ui.nfg :card, :danger, heading: 'Card Headline', subtitle: 'Card Subtitle', class: 'my-4', body: 'Card with danger theme'
+= ui.bootstrap :card, :danger, heading: 'Card Headline', subtitle: 'Card Subtitle', class: 'my-4', body: 'Card with danger theme'
 
-= ui.nfg :card, :warning, heading: 'Card Headline', subtitle: 'Card Subtitle', class: 'my-4', body: 'Card with warning theme'
+= ui.bootstrap :card, :warning, heading: 'Card Headline', subtitle: 'Card Subtitle', class: 'my-4', body: 'Card with warning theme'
 
-= ui.nfg :card, :info, heading: 'Card Headline', subtitle: 'Card Subtitle', class: 'my-4', body: 'Card with info theme'
+= ui.bootstrap :card, :info, heading: 'Card Headline', subtitle: 'Card Subtitle', class: 'my-4', body: 'Card with info theme'
 
-= ui.nfg :card, :light, heading: 'Card Headline', subtitle: 'Card Subtitle', class: 'my-4', body: 'Card with light theme'
+= ui.bootstrap :card, :light, heading: 'Card Headline', subtitle: 'Card Subtitle', class: 'my-4', body: 'Card with light theme'
 
-= ui.nfg :card, :dark, heading: 'Card Headline', subtitle: 'Card Subtitle', class: 'my-4', body: 'Card with dark theme'
+= ui.bootstrap :card, :dark, heading: 'Card Headline', subtitle: 'Card Subtitle', class: 'my-4', body: 'Card with dark theme'
 
 %hr
 
 %h3 Outlined Card Themes
-= ui.nfg :card, :primary, :outlined, heading: 'Card Headline', subtitle: 'Card Subtitle', class: 'my-4', footer: 'Card Footer' do
+= ui.bootstrap :card, :primary, :outlined, heading: 'Card Headline', subtitle: 'Card Subtitle', class: 'my-4', footer: 'Card Footer' do
   %p.card-text Card with primary theme
 
-= ui.nfg :card, :outlined, :secondary, heading: 'Card Headline', subtitle: 'Card Subtitle', class: 'my-4', body: 'Card with secondary theme'
+= ui.bootstrap :card, :outlined, :secondary, heading: 'Card Headline', subtitle: 'Card Subtitle', class: 'my-4', body: 'Card with secondary theme'
 
-= ui.nfg :card, :success, :outlined, heading: 'Card Headline', subtitle: 'Card Subtitle', class: 'my-4', body: 'Card with success theme'
+= ui.bootstrap :card, :success, :outlined, heading: 'Card Headline', subtitle: 'Card Subtitle', class: 'my-4', body: 'Card with success theme'
 
-= ui.nfg :card, :outlined, :danger, heading: 'Card Headline', subtitle: 'Card Subtitle', class: 'my-4', body: 'Card with danger theme'
+= ui.bootstrap :card, :outlined, :danger, heading: 'Card Headline', subtitle: 'Card Subtitle', class: 'my-4', body: 'Card with danger theme'
 
-= ui.nfg :card, :outlined, :warning, heading: 'Card Headline', subtitle: 'Card Subtitle', class: 'my-4', body: 'Card with warning theme'
+= ui.bootstrap :card, :outlined, :warning, heading: 'Card Headline', subtitle: 'Card Subtitle', class: 'my-4', body: 'Card with warning theme'
 
-= ui.nfg :card, :outlined, :info, heading: 'Card Headline', subtitle: 'Card Subtitle', class: 'my-4', body: 'Card with info theme'
+= ui.bootstrap :card, :outlined, :info, heading: 'Card Headline', subtitle: 'Card Subtitle', class: 'my-4', body: 'Card with info theme'
 
-= ui.nfg :card, :outlined, :light, heading: 'Card Headline', subtitle: 'Card Subtitle', class: 'my-4', body: "Card with light theme. Since this is an outline card, the light theme won't have any affect, otherwise it would be white text on a white background."
+= ui.bootstrap :card, :outlined, :light, heading: 'Card Headline', subtitle: 'Card Subtitle', class: 'my-4', body: "Card with light theme. Since this is an outline card, the light theme won't have any affect, otherwise it would be white text on a white background."
 
-= ui.nfg :card, :outlined, :dark, heading: 'Card Headline', subtitle: 'Card Subtitle', class: 'my-4', body: 'Card with dark theme'
+= ui.bootstrap :card, :outlined, :dark, heading: 'Card Headline', subtitle: 'Card Subtitle', class: 'my-4', body: 'Card with dark theme'

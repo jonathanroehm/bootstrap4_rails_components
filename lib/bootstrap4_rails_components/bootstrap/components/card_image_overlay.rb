@@ -6,7 +6,7 @@ module Bootstrap4RailsComponents
       # Bootstrap Card Header
       # https://getbootstrap.com/docs/4.1/components/card/#header-and-footer
       class CardImageOverlay < Bootstrap4RailsComponents::Bootstrap::Components::Base
-        include Bootstrap4RailsComponents::Components::Utilities::Titleable
+        include Bootstrap4RailsComponents::Bootstrap::Utilities::Titleable
 
         def component_family
           :card

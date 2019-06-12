@@ -10,7 +10,7 @@ module ComponentAttributeDefaultsHelper
   # Allows for setting up (and stubbing) conditional nil value option keys
   #
   # Example:
-  # ui.nfg :button, modal: '#the_modal', tooltip: ('tooltip' if feature_spec_truthy_condition?)
+  # ui.bootstrap :button, modal: '#the_modal', tooltip: ('tooltip' if feature_spec_truthy_condition?)
   #
   # The above results in a modalable button that has a (valid) nil tooltip.
   def feature_spec_truthy_condition?

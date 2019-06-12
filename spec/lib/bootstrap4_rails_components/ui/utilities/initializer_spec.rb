@@ -26,11 +26,6 @@ RSpec.describe Bootstrap4RailsComponents::UI::Utilities::Initializer do
       let(:component_suite) { 'Bootstrap' }
       it { is_expected.to eq '<div class="alert alert-primary alert-dismissible fade show" role="alert"><button class="btn close" data-dismiss="alert" aria-label="Close" type="button"><span aria-hidden="true">&times;</span></button>' + body + '</div>' }
     end
-
-    context 'rendering #nfg components' do
-      let(:component_suite) { 'NetworkForGood' }
-      pending 'once NFG components have been re-enstated'
-    end
   end
 
   describe '#initializer' do
@@ -46,10 +41,6 @@ RSpec.describe Bootstrap4RailsComponents::UI::Utilities::Initializer do
         it { expect(component.traits).to eq traits }
         it { expect(component.options).to eq options.merge!(traits: traits) }
       end
-    end
-
-    context 'initializing Network for Good components' do
-      pending 'Coming after Network for Good components are re-enstated'
     end
   end
 
@@ -85,12 +76,6 @@ RSpec.describe Bootstrap4RailsComponents::UI::Utilities::Initializer do
       let(:component_suite) { 'Bootstrap' }
       let(:tested_component_name) { :card }
       it { is_expected.to eq 'bootstrap4_rails_components/bootstrap/cards/card' }
-    end
-
-    context 'partial path for network for good components' do
-      let(:component_suite) { 'NetworkForGood' }
-      before { allow(component).to receive(:component_family).and_return(nil) }
-      it { is_expected.to eq 'bootstrap4_rails_components/elements/alerts/alert' }
     end
   end
 end

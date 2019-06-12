@@ -113,7 +113,7 @@ RSpec.describe Bootstrap4RailsComponents::Bootstrap::Components::Embed do
 
     describe '#non_html_attribute_options' do
       subject { embed.send(:non_html_attribute_options) }
-      it { is_expected.to eq %i[body heading traits iframe aspect_ratio autoplay] }
+      it { is_expected.to eq %i[body heading traits render_if render_unless iframe aspect_ratio autoplay] }
     end
 
     describe '#default_autoplay' do

@@ -76,14 +76,14 @@ All components accept the same attributes when appropriate. This list will expan
 Examples:
 ```haml
 // Produce a styled, pre-designed submit button for your form on the fly
-= ui.nfg :button, :submit
+= ui.bootstrap :button, :submit
 
 // Is the traited / predesigned equivalent of...
-= ui.nfg :button, as: :button, type: 'submit', icon: 'chevron-right', body: 'Save & Exit', theme: :primary, disable_with: "<i class='fa fa-spinner fa-spin mr-1'></i> Saving..."
+= ui.bootstrap :button, as: :button, type: 'submit', icon: 'chevron-right', body: 'Save & Exit', theme: :primary, disable_with: "<i class='fa fa-spinner fa-spin mr-1'></i> Saving..."
 
 // Build your own button
-= ui.nfg :button, :danger, data: { describe: 'delete-button' } do
-  = ui.nfg :icon, 'trash', class: 'mr-1', text: 'Delete Row'
+= ui.bootstrap :button, :danger, data: { describe: 'delete-button' } do
+  = ui.bootstrap :icon, 'trash', class: 'mr-1', text: 'Delete Row'
 ```
 
 #### Trait details
@@ -98,17 +98,17 @@ The first "kind" of trait is "speedy" versions of options. The second "kind" of 
 We do this, for example, with an error alert, which then pre-supplies a set of options...
 
 ```haml
-= ui.nfg :alert, :error
+= ui.bootstrap :alert, :error
 
 // is the pre-designed error alert that looks like this:
-= ui.nfg :alert, :dismissible, theme: :danger, heading: 'Oops!', body: 'There appears to be someting wrong with your submission! Please take a look...'
+= ui.bootstrap :alert, :dismissible, theme: :danger, heading: 'Oops!', body: 'There appears to be someting wrong with your submission! Please take a look...'
 ```
 
 The second kind of trait is the speedy version (described above).
 
 Here are some implementation examples of speedy traits:
 * For components that are "themeable" (alerts, buttons, etc) and are designated as such, automatically get a theme trait:
-  * `ui.nfg :button, :primary` is a speedy way to write `ui.nfg :button, theme: :primary`
+  * `ui.bootstrap :button, :primary` is a speedy way to write `ui.bootstrap :button, theme: :primary`
   * `:primary`
   * `:secondary`
   * `:success`
@@ -118,14 +118,14 @@ Here are some implementation examples of speedy traits:
   * `:light`
   * `:dark`
 * For components that are resizable (buttons, modals, etc)
-  * `ui.nfg :button, :large` is the same as `ui.nfg :button, size: :large`
+  * `ui.bootstrap :button, :large` is the same as `ui.bootstrap :button, size: :large`
   * `:lg`
   * `:large`
   * `:sm`
   * `:small`
 * For components that are collapsible (Tiles for example)
-  * `ui.nfg :tile, :collapsible` is the same as `ui.nfg :tile, collapsed: false`
-  * `ui.nfg :tile, :collapsed` is the same as `ui.nfg :tile, collapsed: true`
+  * `ui.bootstrap :tile, :collapsible` is the same as `ui.bootstrap :tile, collapsed: false`
+  * `ui.bootstrap :tile, :collapsed` is the same as `ui.bootstrap :tile, collapsed: true`
   * `:collapsible`
   * `:collapsed`
 * And more... to be documented
@@ -133,7 +133,7 @@ Here are some implementation examples of speedy traits:
 More soon...
 
 ### NFG Components
-Syntax: `= ui.nfg :component_name, optional_traits, options`
+Syntax: `= ui.bootstrap :component_name, optional_traits, options`
 
 Components are organized into 4 major groupings. Currently 3 of the groupings are available through this gem.
 
@@ -203,13 +203,13 @@ Groupings of elements to create rich interfaces. For example, an `:activity_feed
 
 Utilize all bootstrap4 components, coded to strict bootstrap standards via a similar method: `= ui.bootstrap :my_component, options...`
 
-*Note: while the names of bootstrap components and network for good components may be similar or identical (ex.: the design system has an `:alert` as does bootstrap), do not use bootstrap components on the front-end. _Only use `ui.nfg` components for front-end code._ Great care has been taken to ensure that any component you'd expect to have from bootstrap4 is made available by an appropriately coded and designed design system component*
+*Note: while the names of bootstrap components and network for good components may be similar or identical (ex.: the design system has an `:alert` as does bootstrap), do not use bootstrap components on the front-end. _Only use `ui.bootstrap` components for front-end code._ Great care has been taken to ensure that any component you'd expect to have from bootstrap4 is made available by an appropriately coded and designed design system component*
 
 The bootstrap side of this will eventually be isolated into its own gem. Until then, it lives within the `bootstrap4_rails_components` gem.
 
 ```haml
 // An example alert
-= ui.nfg :alert, theme: :danger, dismissible: false, headline: 'Oh snap!', body: 'The alert body content'
+= ui.bootstrap :alert, theme: :danger, dismissible: false, headline: 'Oh snap!', body: 'The alert body content'
 
 // Build your own button
 = ui.bootstrap :button, theme: :danger, data: { describe: 'delete-button' } do

@@ -40,7 +40,7 @@ en:
                      Remove `remote: true` or `modal: '%{modal}'` from your component's :options hash
 
                      Example incorrect usage:
-                     = ui.nfg :button, remote: true, modal: '%{modal}', ...
+                     = ui.bootstrap :button, remote: true, modal: '%{modal}', ...
 
                      Component Reference:
                      Invalid component: %{class_name}

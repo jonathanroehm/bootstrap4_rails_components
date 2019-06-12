@@ -1,5 +1,5 @@
 module UtilityEnhancedComponentCollectorHelper
-  # Component suites options: :nfg, :bootstrap
+  # Component suites options: :bootstrap
   # tested_method example: :profile
   #
   # Example usage:
@@ -23,18 +23,11 @@ module UtilityEnhancedComponentCollectorHelper
   # In practice, this array is also used as an alert on each feature spec view
   # to call out to the UAT person to also look for these system defined
   # components. Making sure that human eyes are also given accurate information
-
-  # Note: does not yet support the :bootstrap component_suite
-  def components_that_have_defined_method(component_suite: :nfg, tested_method:, css_class: false)
+  def components_that_have_defined_method(component_suite: :bootstrap, tested_method:, css_class: false)
     components = []
 
     send("#{component_suite}_component_suite").each do |component_name|
-      if component_suite == :nfg
-        component = Bootstrap4RailsComponents::UI::NetworkForGood.new(nil, component_name.to_sym)
-      elsif component_suite == :bootstrap
-        component = Bootstrap4RailsComponents::UI::Bootstrap.new(nil, component_name.to_sym)
-      end
-
+      component = Bootstrap4RailsComponents::UI::Bootstrap.new(nil, component_name.to_sym)
       component_class = component.send(:ancestry_string).constantize
 
       # Don't continue if the component class doesn't have the requested method
@@ -47,10 +40,6 @@ module UtilityEnhancedComponentCollectorHelper
   end
 
   private
-
-  def nfg_component_suite
-    [*Bootstrap4RailsComponents::FOUNDATION_COMPONENT_NAMES, *Bootstrap4RailsComponents::ELEMENT_COMPONENT_NAMES, *Bootstrap4RailsComponents::PATTERN_COMPONENT_NAMES]
-  end
 
   def bootstrap_component_suite
     Nfg::BOOTSTRAP_COMPONENT_NAMES

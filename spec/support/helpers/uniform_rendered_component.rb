@@ -6,7 +6,7 @@
 # the rendered HTML string includes a specific substring.
 #
 # Example usage:
-# let(:rendered_component) { view_context.ui.nfg(:button, options) }
+# let(:rendered_component) { view_context.ui.bootstrap(:button, options) }
 # subject { uniform_rendered_component(rendered_component) }
 # etc...
 

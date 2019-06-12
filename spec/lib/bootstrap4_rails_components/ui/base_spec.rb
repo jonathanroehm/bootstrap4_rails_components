@@ -20,39 +20,27 @@ RSpec.describe Bootstrap4RailsComponents::UI::Base do
     it 'responds to #bootstrap method' do
       expect(subject).to respond_to :bootstrap
     end
-
-    it 'responds to #nfg method' do
-      expect(subject).to respond_to :nfg
-    end
   end
 
   describe '#bootstrap' do
     subject { base_component.bootstrap(*component_args) }
-    let(:body) { 'test' }
-    let(:component_args) { [:button, [], { body: body}] }
-    it 'renders a bootstrap component' do
-      expect(subject).to eq "<a class=\"btn btn-primary\" href=\"#\">#{body}</a>"
-    end
-  end
 
-  describe '#nfg' do
-    shared_examples 'a rendered nfg button component' do
-      it 'renders an nfg button component' do
+    shared_examples 'a rendered bootstrap button component' do
+      it 'renders a bootstrap button component' do
         expect(subject).to eq "<a class=\"btn btn-primary\" href=\"#\">#{body}</a>"
       end
     end
 
-    subject { base_component.nfg(*component_args) }
     let(:body) { 'test' }
     let(:options) {{ body: body }}
     let(:component_args) { [:button, [], options] }
-    it_behaves_like 'a rendered nfg button component'
+    it_behaves_like 'a rendered bootstrap button component'
 
     context 'when render_if is used' do
       let(:options) {{ body: body, render_if: render_if }}
       context 'when render_if is true' do
         let(:render_if) { true }
-        it_behaves_like 'a rendered nfg button component'
+        it_behaves_like 'a rendered bootstrap button component'
       end
 
       context 'when render_if is false' do
@@ -81,12 +69,12 @@ RSpec.describe Bootstrap4RailsComponents::UI::Base do
 
       context 'when render_if is false' do
         let(:render_unless) { false }
-        it_behaves_like 'a rendered nfg button component'
+        it_behaves_like 'a rendered bootstrap button component'
       end
 
       context 'when render_if is nil' do
         let(:render_unless) { nil }
-        it_behaves_like 'a rendered nfg button component'
+        it_behaves_like 'a rendered bootstrap button component'
       end
     end
   end

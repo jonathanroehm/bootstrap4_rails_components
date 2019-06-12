@@ -11,7 +11,7 @@ shared_examples_for 'a component that includes the Describable utility module' d
     let(:component_symbolic_name) { described_class.to_s.split('::').last.underscore.downcase.to_sym }
     let(:view_context) { ActionController::Base.new.view_context }
     let(:ruby_component) { described_class.new(options, ActionController::Base.new.view_context) }
-    let(:rendered_component) { view_context.ui.nfg(component_symbolic_name, ruby_component.options) }
+    let(:rendered_component) { view_context.ui.bootstrap(component_symbolic_name, ruby_component.options) }
     let(:options) { {} }
     let(:arbitrary_data_key) { 'test-key' }
     let(:arbitrary_data_value) { 'test-value' }

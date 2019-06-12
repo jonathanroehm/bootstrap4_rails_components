@@ -143,7 +143,7 @@ module Bootstrap4RailsComponents
         # Remove attributes from html_options that shouldn't show up in the
         # html element, ex: <div body='should not be here'>
         def non_html_attribute_options
-          @non_html_attribute_options ||= %i[body heading traits]
+          @non_html_attribute_options ||= %i[body heading traits render_if render_unless]
         end
       end
     end

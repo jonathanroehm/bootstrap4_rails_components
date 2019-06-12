@@ -13,7 +13,7 @@
 # 0.9.9
 *Non-breaking changes*
 * `Bootstrap4RailsComponents::Components::Patterns::SlatActions` can now accept the `:button` option. Setting `:button` to `true` (*and* `menu: false`) will result in the `SlatActions` component automatically rendering a button in place of the dropdown menu. Setting `button: false` (*and* `menu: false`) in the component options will render the component as a text link.
-  * Example usage: `= ui.nfg :slat_actions, icon: 'trash', body: 'Delete', menu: false, button: true, method: :delete`
+  * Example usage: `= ui.bootstrap :slat_actions, icon: 'trash', body: 'Delete', menu: false, button: true, method: :delete`
 * A patching system has been introduced for the design system (not `bootstrap`).
   * Patching a component will now signal that we are introducing functionality that we intend to remove. It also provides a pattern for implementing "quick fixes" and provides a single module suite to review for code debt.
 * Along with the patching concept, a new pattern for "quick built" components is now available. This allows us to remove "pass through" methods from the parent component's class and keep it in its own isolated area.

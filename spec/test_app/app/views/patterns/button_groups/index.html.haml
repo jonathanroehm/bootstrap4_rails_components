@@ -9,120 +9,120 @@
 %h3 Patterns
 
 %h4 Button Group Themes
-= ui.nfg :button_group, class: 'example-class' do
-  = ui.nfg :button, :primary, as: :button, body: 'Button'
-  = ui.nfg :button, :primary, as: :button do
+= ui.bootstrap :button_group, class: 'example-class' do
+  = ui.bootstrap :button, :primary, as: :button, body: 'Button'
+  = ui.bootstrap :button, :primary, as: :button do
     Button
-  = ui.nfg :button, :primary, as: :button do
-    Button
-
-%br
-
-= ui.nfg :button_group, class: 'example-class' do
-  = ui.nfg :button, :secondary, as: :button, body: 'Button'
-  = ui.nfg :button, :secondary, as: :button do
-    Button
-  = ui.nfg :button, :secondary, as: :button do
+  = ui.bootstrap :button, :primary, as: :button do
     Button
 
 %br
 
-= ui.nfg :button_group, class: 'example-class' do
-  = ui.nfg :button,:success, as: :button, body: 'Button'
-  = ui.nfg :button,:success, as: :button do
+= ui.bootstrap :button_group, class: 'example-class' do
+  = ui.bootstrap :button, :secondary, as: :button, body: 'Button'
+  = ui.bootstrap :button, :secondary, as: :button do
     Button
-  = ui.nfg :button,:success, as: :button do
-    Button
-
-%br
-
-= ui.nfg :button_group, class: 'example-class' do
-  = ui.nfg :button, :danger, as: :button, body: 'Button'
-  = ui.nfg :button, :danger, as: :button do
-    Button
-  = ui.nfg :button, :danger, as: :button do
+  = ui.bootstrap :button, :secondary, as: :button do
     Button
 
 %br
 
-= ui.nfg :button_group, class: 'example-class' do
-  = ui.nfg :button, :warning, as: :button, body: 'Button'
-  = ui.nfg :button, :warning, as: :button do
+= ui.bootstrap :button_group, class: 'example-class' do
+  = ui.bootstrap :button,:success, as: :button, body: 'Button'
+  = ui.bootstrap :button,:success, as: :button do
     Button
-  = ui.nfg :button, :warning, as: :button do
-    Button
-
-%br
-
-= ui.nfg :button_group, class: 'example-class' do
-  = ui.nfg :button, :info, as: :button, body: 'Button'
-  = ui.nfg :button, :info, as: :button do
-    Button
-  = ui.nfg :button, :info, as: :button do
+  = ui.bootstrap :button,:success, as: :button do
     Button
 
 %br
 
-= ui.nfg :button_group, class: 'example-class' do
-  = ui.nfg :button, :light, as: :button, body: 'Button'
-  = ui.nfg :button, :light, as: :button do
+= ui.bootstrap :button_group, class: 'example-class' do
+  = ui.bootstrap :button, :danger, as: :button, body: 'Button'
+  = ui.bootstrap :button, :danger, as: :button do
     Button
-  = ui.nfg :button, :light, as: :button do
+  = ui.bootstrap :button, :danger, as: :button do
     Button
 
 %br
 
-= ui.nfg :button_group, class: 'example-class' do
-  = ui.nfg :button, :dark, as: :button, body: 'Button'
-  = ui.nfg :button, :dark, as: :button do
+= ui.bootstrap :button_group, class: 'example-class' do
+  = ui.bootstrap :button, :warning, as: :button, body: 'Button'
+  = ui.bootstrap :button, :warning, as: :button do
     Button
-  = ui.nfg :button, :dark, as: :button do
+  = ui.bootstrap :button, :warning, as: :button do
+    Button
+
+%br
+
+= ui.bootstrap :button_group, class: 'example-class' do
+  = ui.bootstrap :button, :info, as: :button, body: 'Button'
+  = ui.bootstrap :button, :info, as: :button do
+    Button
+  = ui.bootstrap :button, :info, as: :button do
+    Button
+
+%br
+
+= ui.bootstrap :button_group, class: 'example-class' do
+  = ui.bootstrap :button, :light, as: :button, body: 'Button'
+  = ui.bootstrap :button, :light, as: :button do
+    Button
+  = ui.bootstrap :button, :light, as: :button do
+    Button
+
+%br
+
+= ui.bootstrap :button_group, class: 'example-class' do
+  = ui.bootstrap :button, :dark, as: :button, body: 'Button'
+  = ui.bootstrap :button, :dark, as: :button do
+    Button
+  = ui.bootstrap :button, :dark, as: :button do
     Button
 
 
 %hr
 
 %h4 Button Groups with links
-= ui.nfg :button_group, class: 'example-class' do
-  / = ui.nfg :button, href: '#testURL', body: 'Link Btn W/O :as'
-  = ui.nfg :button, :link, :active, href: '#testURL' do
+= ui.bootstrap :button_group, class: 'example-class' do
+  / = ui.bootstrap :button, href: '#testURL', body: 'Link Btn W/O :as'
+  = ui.bootstrap :button, :link, :active, href: '#testURL' do
     Active Button
-  = ui.nfg :button, :link do
+  = ui.bootstrap :button, :link do
     Link Button without HREF
 
 %hr
 
 %h4 Button groups with buttons
-= ui.nfg :button_group, role: 'not a good one' do
-  = ui.nfg :button, as: :button, body: 'Button'
-  = ui.nfg :button, as: :button do
+= ui.bootstrap :button_group, role: 'not a good one' do
+  = ui.bootstrap :button, as: :button, body: 'Button'
+  = ui.bootstrap :button, as: :button do
     Button
-  = ui.nfg :button, as: :button do
+  = ui.bootstrap :button, as: :button do
     Button
 
 %hr
 
 %h3 Sizing
 
-= ui.nfg :button_group, :lg, aria: { 'test' => 'test2' } do
-  = ui.nfg :button, as: :button, body: 'Left'
-  = ui.nfg :button, as: :button do
+= ui.bootstrap :button_group, :lg, aria: { 'test' => 'test2' } do
+  = ui.bootstrap :button, as: :button, body: 'Left'
+  = ui.bootstrap :button, as: :button do
     Middle
-  = ui.nfg :button, as: :button do
+  = ui.bootstrap :button, as: :button do
     Right
 
-= ui.nfg :button_group, aria: { 'test' => 'test2' } do
-  = ui.nfg :button, as: :button, body: 'Left'
-  = ui.nfg :button, as: :button do
+= ui.bootstrap :button_group, aria: { 'test' => 'test2' } do
+  = ui.bootstrap :button, as: :button, body: 'Left'
+  = ui.bootstrap :button, as: :button do
     Middle
-  = ui.nfg :button, as: :button do
+  = ui.bootstrap :button, as: :button do
     Right
 
-= ui.nfg :button_group, :sm, aria: { 'test' => 'test2' } do
-  = ui.nfg :button, as: :button, body: 'Left'
-  = ui.nfg :button, as: :button do
+= ui.bootstrap :button_group, :sm, aria: { 'test' => 'test2' } do
+  = ui.bootstrap :button, as: :button, body: 'Left'
+  = ui.bootstrap :button, as: :button do
     Middle
-  = ui.nfg :button, as: :button do
+  = ui.bootstrap :button, as: :button do
     Right
 
 %hr
@@ -130,32 +130,32 @@
 %h4 Nesting Button Groups
 
 %h5 Nesting Sizes
-= ui.nfg :button_group, :lg, aria: { 'test' => 'test2' } do
-  = ui.nfg :button, as: :button, body: 'Large Left'
-  = ui.nfg :button, as: :button do
+= ui.bootstrap :button_group, :lg, aria: { 'test' => 'test2' } do
+  = ui.bootstrap :button, as: :button, body: 'Large Left'
+  = ui.bootstrap :button, as: :button do
     Large Middle
-  = ui.nfg :button, as: :button do
+  = ui.bootstrap :button, as: :button do
     Large Right
 
-  = ui.nfg :button_group, size: :sm, aria: { 'test' => 'test2' } do
-    = ui.nfg :button, as: :button, body: 'Small Left'
-    = ui.nfg :button, as: :button do
+  = ui.bootstrap :button_group, size: :sm, aria: { 'test' => 'test2' } do
+    = ui.bootstrap :button, as: :button, body: 'Small Left'
+    = ui.bootstrap :button, as: :button do
       Small Middle
-    = ui.nfg :button, as: :button do
+    = ui.bootstrap :button, as: :button do
       Small Right
 
-  = ui.nfg :button_group, aria: { 'test' => 'test2' } do
-    = ui.nfg :button, as: :button, body: 'Small Left'
-    = ui.nfg :button, as: :button do
+  = ui.bootstrap :button_group, aria: { 'test' => 'test2' } do
+    = ui.bootstrap :button, as: :button, body: 'Small Left'
+    = ui.bootstrap :button, as: :button do
       Small Middle
 
 %hr
 
 %h3 Vertical variation
 %h4 Button groups with buttons
-= ui.nfg :button_group, :vertical, aria: { 'test' => 'test2' } do
-  = ui.nfg :button, as: :button, body: 'Button'
-  = ui.nfg :button, as: :button do
+= ui.bootstrap :button_group, :vertical, aria: { 'test' => 'test2' } do
+  = ui.bootstrap :button, as: :button, body: 'Button'
+  = ui.bootstrap :button, as: :button do
     Button
-  = ui.nfg :button, as: :button do
+  = ui.bootstrap :button, as: :button do
     Button

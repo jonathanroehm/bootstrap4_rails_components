@@ -4,13 +4,13 @@ We run into situations like this on #show views all the time where we are provid
 
 This requires that users always know the format for setting up the "label" as a %b tag, followed by a BR
 ```
-= ui.nfg :typeface, :body do
+= ui.bootstrap :typeface, :body do
   %b Credit card statement name:
   %br
   = entity_presenter.credit_card_statement_name
 ```
 
-This could become: `= ui.nfg :typeface, label: 'Credit card statement name:', body: entity_presenter.credit_card_statement_name`
+This could become: `= ui.bootstrap :typeface, label: 'Credit card statement name:', body: entity_presenter.credit_card_statement_name`
 That would output the design pattern for the bolded label, break, and body content -- or whatever we may update the pattern to be.
 
 # Icon
@@ -25,20 +25,20 @@ This tends to result in something like this:
 However, the design pattern is actually:
 ```
 - if entity.has_link_to_website?
-  = ui.nfg :icon, 'check', :success, text: 'Yes'
+  = ui.bootstrap :icon, 'check', :success, text: 'Yes'
 - else
-  = ui.nfg :icon, 'times', :muted, text: 'No'
+  = ui.bootstrap :icon, 'times', :muted, text: 'No'
 ```
 
 A `:boolean` trait combined with a `condition:` option might look like this:
-`= ui.nfg :icon, :boolean, condition: entity.has_link_to_website?`
+`= ui.bootstrap :icon, :boolean, condition: entity.has_link_to_website?`
 Which would then check the condition, if true: output the success themed check icon with "Yes" text, etc.
 
 2. An external link trait, e.g. :external would convert:
 ```
-= ui.nfg :icon, 'external-link', text: t('.links.stored_consent_agreement'), right: true
+= ui.bootstrap :icon, 'external-link', text: t('.links.stored_consent_agreement'), right: true
 ```
 And used as a trait:
 ```
-= ui.nfg :icon, :external, text: t('.links.stored_consent_agreement')
+= ui.bootstrap :icon, :external, text: t('.links.stored_consent_agreement')
 ```

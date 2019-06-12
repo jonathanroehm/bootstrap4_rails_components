@@ -32,13 +32,6 @@ module Bootstrap4RailsComponents
     config.to_prepare do
       ActiveSupport.on_load :action_controller do
         helper Bootstrap4RailsComponents::ApplicationHelper
-        helper Bootstrap4RailsComponents::Components::ResourceThemesHelper
-        helper Bootstrap4RailsComponents::Components::TooltipHelper
-        helper Bootstrap4RailsComponents::Components::EmailHelpers
-      end
-
-      ActiveSupport.on_load :action_mailer do
-        helper Bootstrap4RailsComponents::Components::EmailHelpers
       end
     end
   end

@@ -187,7 +187,7 @@ RSpec.describe Bootstrap4RailsComponents::Bootstrap::Components::Base do
 
     describe '#non_html_attribute_options' do
       subject { bootstrap_base.send(:non_html_attribute_options) }
-      it { is_expected.to eq %i[body heading traits] }
+      it { is_expected.to eq %i[body heading traits render_if render_unless] }
     end
   end
 end
