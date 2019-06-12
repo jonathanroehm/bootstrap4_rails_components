@@ -1,7 +1,7 @@
 shared_examples_for 'a component that includes the Collapsible utility module' do
   describe 'Collapsible module included in the component' do
     let(:component) { described_class.new({}, ActionController::Base.new.view_context) }
-    it { expect(described_class.included_modules).to include Bootstrap4Rails::Bootstrap::Utilities::Collapsible }
+    it { expect(described_class.included_modules).to include Bootstrap4RailsComponents::Bootstrap::Utilities::Collapsible }
     it 'responds to the Collapsible public methods' do
       expect(component).to respond_to :collapse, :collapsed, :collapsible
     end

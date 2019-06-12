@@ -1,14 +1,14 @@
 shared_examples_for 'a component that includes the Pill trait module' do
   describe 'Pill trait module included in the component' do
     let(:component) { described_class.new({}, ActionController::Base.new.view_context) }
-    it { expect(described_class.included_modules).to include Bootstrap4Rails::Components::Traits::Pill }
+    it { expect(described_class.included_modules).to include Bootstrap4RailsComponents::Components::Traits::Pill }
     it "responds to the Pill traits' public methods" do
       expect(component).to respond_to(:pill_trait)
     end
   end
 
   describe 'registered traits' do
-    it { expect(Bootstrap4Rails::Components::Traits::Pill::TRAITS).to eq %i[pill] }
+    it { expect(Bootstrap4RailsComponents::Components::Traits::Pill::TRAITS).to eq %i[pill] }
   end
 
   describe 'trait updates to components' do

@@ -1,7 +1,7 @@
 shared_examples_for 'a component that includes the Renderable utility module' do
   describe 'Renderable module included in the component' do
     let(:component) { described_class.new({}, ActionController::Base.new.view_context) }
-    it { expect(described_class.included_modules).to include Bootstrap4Rails::Components::Utilities::Renderable }
+    it { expect(described_class.included_modules).to include Bootstrap4RailsComponents::Components::Utilities::Renderable }
     it 'responds to the Renderable public methods' do
       expect(component).to respond_to :render_if, :render_unless
     end

@@ -1,2 +1,2 @@
-Bootstrap4Rails::Engine.routes.draw do
+Bootstrap4RailsComponents::Engine.routes.draw do
 end

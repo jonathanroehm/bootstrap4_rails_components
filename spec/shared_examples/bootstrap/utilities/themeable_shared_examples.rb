@@ -3,7 +3,7 @@
 shared_examples_for 'a component that includes the Themeable utility module' do |component_suite:|
   describe 'Themeable module included in the component' do
     let(:component) { described_class.new({}, ActionController::Base.new.view_context) }
-    it { expect(described_class.included_modules).to include Bootstrap4Rails::Bootstrap::Utilities::Themeable }
+    it { expect(described_class.included_modules).to include Bootstrap4RailsComponents::Bootstrap::Utilities::Themeable }
     it 'responds to the Themeable public methods' do
       expect(component).to respond_to :outlined, :theme
     end
@@ -21,7 +21,7 @@ shared_examples_for 'a component that includes the Themeable utility module' do 
     context 'when a theme is present in options' do
       context 'when outlined is present in options' do
         let(:options) { { outlined: true, theme: @theme } }
-        Bootstrap4Rails::BOOTSTRAP_THEMES.each do |theme|
+        Bootstrap4RailsComponents::BOOTSTRAP_THEMES.each do |theme|
           it 'applies a theme that is outlined' do
             @theme = theme
             if ruby_component.send(:outlineable?)
@@ -63,7 +63,7 @@ shared_examples_for 'a component that includes the Themeable utility module' do 
 
     context 'when theme is not present in options' do
       let(:component_default_theme) { ruby_component.send(:default_theme) }
-      let(:default_theme) { Class.new.include(Bootstrap4Rails::Bootstrap::Utilities::Themeable).new.send(:default_theme) }
+      let(:default_theme) { Class.new.include(Bootstrap4RailsComponents::Bootstrap::Utilities::Themeable).new.send(:default_theme) }
       context 'when a default theme is established in the component' do
 
         it 'renders the component with the alternative default theme' do
@@ -128,7 +128,7 @@ shared_examples_for 'a component that includes the Themeable utility module' do 
         end
 
         context 'and when a theme is present in options' do
-          let(:tested_theme) { Bootstrap4Rails::BOOTSTRAP_THEMES.sample(1).first }
+          let(:tested_theme) { Bootstrap4RailsComponents::BOOTSTRAP_THEMES.sample(1).first }
           let(:options) { { theme: tested_theme } }
           it 'renders the component with a theme' do
             expect(substring_present?(string: subject,
@@ -143,7 +143,7 @@ shared_examples_for 'a component that includes the Themeable utility module' do 
 end
 
 shared_examples_for 'a component without outlined themes' do
-  Bootstrap4Rails::BOOTSTRAP_THEMES.each do |theme|
+  Bootstrap4RailsComponents::BOOTSTRAP_THEMES.each do |theme|
     it 'applies a theme that is not outlined' do
       @theme = theme
       expect(substring_present?(string: uniform_rendered_component(rendered_component),

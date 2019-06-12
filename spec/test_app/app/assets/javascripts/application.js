@@ -1,1 +1,1 @@
-//= require bootstrap4_rails/application
+//= require bootstrap4_rails_components/application

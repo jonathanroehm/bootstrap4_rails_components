@@ -1,14 +1,14 @@
 shared_examples_for 'a component that includes the Dismiss trait module' do
   describe 'Dismiss trait module included in the component' do
     let(:component) { described_class.new({}, ActionController::Base.new.view_context) }
-    it { expect(described_class.included_modules).to include Bootstrap4Rails::Components::Traits::Dismiss }
+    it { expect(described_class.included_modules).to include Bootstrap4RailsComponents::Components::Traits::Dismiss }
     it "responds to the Dismiss traits' public methods" do
       expect(component).to respond_to(:dismissible_trait)
     end
   end
 
   describe 'registered traits' do
-    it { expect(Bootstrap4Rails::Components::Traits::Dismiss::TRAITS).to eq %i[dismissible] }
+    it { expect(Bootstrap4RailsComponents::Components::Traits::Dismiss::TRAITS).to eq %i[dismissible] }
   end
 
   describe 'trait updates to components' do

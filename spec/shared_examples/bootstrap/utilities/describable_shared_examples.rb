@@ -1,7 +1,7 @@
 shared_examples_for 'a component that includes the Describable utility module' do
   describe 'Describable module included in the component' do
     let(:component) { described_class.new({}, ActionController::Base.new.view_context) }
-    it { expect(described_class.included_modules).to include Bootstrap4Rails::Components::Utilities::Describable }
+    it { expect(described_class.included_modules).to include Bootstrap4RailsComponents::Components::Utilities::Describable }
     it 'responds to the dismissible public methods' do
       expect(component).to respond_to :describe, :data
     end

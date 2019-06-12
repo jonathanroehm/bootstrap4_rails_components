@@ -3,7 +3,7 @@ require_relative 'boot'
 require 'rails'
 
 Bundler.require(*Rails.groups)
-require 'bootstrap4_rails'
+require 'bootstrap4_rails_components'
 
 module TestApp
   class Application < Rails::Application

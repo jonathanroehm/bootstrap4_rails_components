@@ -1,7 +1,7 @@
 shared_examples_for 'a component that includes the Theme trait module' do |test_html: true|
   describe 'Theme trait module included in the component' do
     let(:component) { described_class.new({}, ActionController::Base.new.view_context) }
-    it { expect(described_class.included_modules).to include Bootstrap4Rails::Components::Traits::Theme }
+    it { expect(described_class.included_modules).to include Bootstrap4RailsComponents::Components::Traits::Theme }
     it "responds to the Theme traits' public methods" do
       expect(component).to respond_to(:primary_trait,
                                       :secondary_trait,
@@ -16,7 +16,7 @@ shared_examples_for 'a component that includes the Theme trait module' do |test_
     end
 
     describe 'registered traits' do
-      it { expect(Bootstrap4Rails::Components::Traits::Theme::TRAITS).to eq %i[primary secondary success danger warning info light dark white outlined] }
+      it { expect(Bootstrap4RailsComponents::Components::Traits::Theme::TRAITS).to eq %i[primary secondary success danger warning info light dark white outlined] }
     end
 
     describe 'trait updates to components' do
@@ -28,7 +28,7 @@ shared_examples_for 'a component that includes the Theme trait module' do |test_
       # describe 'options updated for the ruby component from traits' do
       #   it 'updates the color theme correctly' do
       #     # by 'confirming the trait updates the theme for the uniquely rendered component' do
-      #       Bootstrap4Rails::Components::Traits::Theme::COLOR_TRAITS.each do |theme_trait_name|
+      #       Bootstrap4RailsComponents::Components::Traits::Theme::COLOR_TRAITS.each do |theme_trait_name|
       #         themed_component = described_class.new({ traits: [theme_trait_name] }, ActionController::Base.new.view_context)
       #         expect(themed_component.theme).to eq theme_trait_name
       #       end
@@ -104,10 +104,10 @@ shared_examples_for 'a component that includes the Theme trait module' do |test_
             end
 
             context 'and when a component does have the additional :outlined trait' do
-              let(:themes) { Bootstrap4Rails::Components::Traits::Theme::COLOR_TRAITS }
+              let(:themes) { Bootstrap4RailsComponents::Components::Traits::Theme::COLOR_TRAITS }
               let(:traits) { [@theme, :outlined] }
 
-              Bootstrap4Rails::Components::Traits::Theme::COLOR_TRAITS.each do |theme|
+              Bootstrap4RailsComponents::Components::Traits::Theme::COLOR_TRAITS.each do |theme|
                 it 'applies the theme with the outlined variation' do
                   @theme = theme
                   if ruby_component.send(:outlineable?)

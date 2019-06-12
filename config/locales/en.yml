@@ -1,5 +1,5 @@
 en:
-  bootstrap4_rails:
+  bootstrap4_rails_components:
     errors:
       argument_error:
         # required keys -- :modal, :class_name, :options, :file, :method

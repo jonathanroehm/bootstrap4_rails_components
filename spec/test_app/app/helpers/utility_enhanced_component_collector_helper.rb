@@ -30,9 +30,9 @@ module UtilityEnhancedComponentCollectorHelper
 
     send("#{component_suite}_component_suite").each do |component_name|
       if component_suite == :nfg
-        component = Bootstrap4Rails::UI::NetworkForGood.new(nil, component_name.to_sym)
+        component = Bootstrap4RailsComponents::UI::NetworkForGood.new(nil, component_name.to_sym)
       elsif component_suite == :bootstrap
-        component = Bootstrap4Rails::UI::Bootstrap.new(nil, component_name.to_sym)
+        component = Bootstrap4RailsComponents::UI::Bootstrap.new(nil, component_name.to_sym)
       end
 
       component_class = component.send(:ancestry_string).constantize
@@ -49,7 +49,7 @@ module UtilityEnhancedComponentCollectorHelper
   private
 
   def nfg_component_suite
-    [*Bootstrap4Rails::FOUNDATION_COMPONENT_NAMES, *Bootstrap4Rails::ELEMENT_COMPONENT_NAMES, *Bootstrap4Rails::PATTERN_COMPONENT_NAMES]
+    [*Bootstrap4RailsComponents::FOUNDATION_COMPONENT_NAMES, *Bootstrap4RailsComponents::ELEMENT_COMPONENT_NAMES, *Bootstrap4RailsComponents::PATTERN_COMPONENT_NAMES]
   end
 
   def bootstrap_component_suite
