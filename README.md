@@ -1,3 +1,5 @@
+## Note: this document is out of date and needs to be re-written. This gem is not yet ready for use.
+
 # Network for Good's Design System for Ruby on Rails
 The authoritative resource for the Network for Good front-end UI, empowered by the NFG Design System.
 
@@ -354,80 +356,7 @@ $ Collapsible? (Y/n):
 
 29. Slat list sm ...
 
-30. Render_if doesn't see nil as falsy. Fix that.
-
 31. _Add a generator to supply the bootstrap shared examples for spec writing your own components._
 
 32. Need to integrate will_paginate rendering into the bootstrap4_rails_components gem.
-
-Component tooltip/icon auto list for backup
-FOUNDATION_COMPONENT_NAMES = %i[color
-                                  icon
-                                  image
-                                  input
-                                  grid
-                                  typeface].freeze
-
-  ELEMENT_COMPONENT_NAMES    = %i[activity
-                                  alert [icon, tooltip]
-                                  badge [icon, tooltip]
-                                  breadcrumb
-                                  breadcrumb_item [icon, tooltip]
-                                  button [icon, tooltip]
-                                  chart
-                                  dropdown_divider
-                                  dropdown_header [icon, tooltip]
-                                  dropdown_item [icon, tooltip]
-                                  dropdown_toggle [icon, tooltip]
-                                  embed
-                                  form_control [icon, tooltip]
-                                  input_group [icon, tooltip]
-                                  key
-                                  list_group_item [icon, tooltip]
-                                  loader [icon]
-                                  media_body [icon, tooltip]
-                                  media_object [icon, tooltip]
-                                  modal_body [icon, tooltip]
-                                  modal_footer
-                                  modal_header [icon]
-                                  nav
-                                  nav_item [icon, tooltip]
-                                  nav_link
-                                  navbar_brand [icon]
-                                  navbar_text
-                                  navbar_toggler [icon]
-                                  popover [icon]
-                                  progress_bar [tooltip]
-                                  slat [icon, tooltip]
-                                  stat [icon, tooltip]
-                                  tab_pane
-                                  table [icon, tooltip]
-                                  task [icon, tooltip]
-
-  PATTERN_COMPONENT_NAMES    = %i[activity_feed [icon, tooltip]
-                                  button_group [tooltip]
-                                  button_toolbar [tooltip]
-                                  card [icon, tooltip]
-                                  carousel [icon, tooltip]
-                                  collapse [icon, tooltip]
-                                  dropdown [icon, tooltip]
-                                  dropdown_menu
-                                  empty_state [icon, tooltip]
-                                  filter_bar [tooltip]
-                                  form_group [tooltip]
-                                  graph
-                                  jumbotron
-                                  list_group
-                                  media [tooltip]
-                                  modal [icon]
-                                  navbar
-                                  navbar_nav
-                                  page_header
-                                  slat_list [tooltip]
-                                  tab_content
-                                  task_list
-                                  tile [icon, tooltip]
-                                  tile_body [icon, tooltip]
-                                  tile_header [icon, tooltip]
-                                  tile_section [icon]
 
